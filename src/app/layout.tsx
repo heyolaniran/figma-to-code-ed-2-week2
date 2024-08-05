@@ -19,8 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="container">
-        <Head />
-        <NavBar />
+        <div className="sticky top-0 z-50">
+          <Head />
+         <NavBar />
+        </div>
+        
         {children}
       </body>
     </html>

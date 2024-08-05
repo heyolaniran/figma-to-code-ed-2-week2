@@ -5,8 +5,8 @@ import SubNav from "./ui/SubNav";
 export default function NavBar() {
   return (
     <>
-      <nav className=" px-16 pb-4 w-full pt-4 lg:block hidden text-black">
-        <div className=" flex items-center border pb-4 border-t-0 border-l-0 border-r-0 flew justify-between ">
+      <nav className=" bg-white px-12 pb-4 w-full pt-4 lg:block hidden text-black">
+        <div className=" flex items-center px-4 border pb-4 border-t-0 border-l-0 border-r-0 flew justify-between ">
           <div className="">
             {leftLinks.map((link) => (
               <Link key={link.id} href={link.href} className="px-2">
