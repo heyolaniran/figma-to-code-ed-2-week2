@@ -5,3 +5,17 @@ export type linksType = {
     href: string
 }
 
+
+export type categoryType = {
+    id: number 
+    name: string
+    total: number
+}
+
+export type productType = {
+    id: number
+    name: string
+    price: number
+    promo: boolean
+    category: number
+}
