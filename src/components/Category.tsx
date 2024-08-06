@@ -17,6 +17,7 @@ export default function Category() {
       <div className="mt-12 mb-6 px-2  container flex flex-wrap justify-center items-center gap-3">
         {categories.map((category) => (
           <button
+            onClick={() => setActive(category.id)}
             key={category.id}
             className={`px-2.5 py-1.5 rounded-full text-sm border-2 flex gap-2 items-center border-black ${active === category.id ? " bg-black text-white" : "text-black bg-white"} `}
           >
