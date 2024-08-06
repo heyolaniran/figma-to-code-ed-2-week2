@@ -21,9 +21,9 @@ export default function RootLayout({
       <body className="container">
         <div className="sticky top-0 z-50">
           <Head />
-         <NavBar />
+          <NavBar />
         </div>
-        
+
         {children}
       </body>
     </html>
