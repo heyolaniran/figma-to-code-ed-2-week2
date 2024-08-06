@@ -8,10 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
+
       backgroundImage: {
        'hero' : "url('/hero.svg')"
       },
+
     },
+    variants: {
+      extend: {
+          display: ["group-hover"],
+      },
+  },
   },
   plugins: [],
 }
