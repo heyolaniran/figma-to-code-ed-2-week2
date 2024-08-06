@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { categories, products } from "@/constants";
 import { useState } from "react";
 import Product from "./ui/Product";
@@ -32,15 +33,25 @@ export default function Category() {
             <Product item={product} />
 
             <div className="mt-2 px-6 pb-2">
-              <h1 className="text-md font-bold leading-4">
-                {" "}
-                {product.name}{" "}
-              </h1>
+              <h1 className="text-md font-bold leading-4"> {product.name} </h1>
 
-              <h2 className="text-gray-400 font-semibold leading-4 text-xl items-center"><span className="text-sm">$</span>{product.price}</h2>
+              <h2 className="text-gray-400 mt-2 font-semibold leading-4 text-2xl items-center">
+                <span className="text-sm">$</span>
+                {product.price}
+              </h2>
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="mt-16 flex justify-center items-center">
+        <Link
+          href={""}
+          className=" bg-white border border-spacing-4 border-solid border-black text-md rounded-2xl px-4 py-1 font-normal"
+        >
+          {" "}
+          View more{" "}
+        </Link>
       </div>
     </section>
   );
