@@ -17,9 +17,9 @@ export default function Product({ item }: { item: productType }) {
           </div>
 
           <div className=" hidden group-hover:flex  w-full  gap-2 items-center ">
-            <button className="rounded-xl px-4 py-2 w-1/2 flex justify-center md:gap-2 items-center text-black bg-white text-center uppercase md:text-sm text-xs font-semibold ">
+            <button className="rounded-xl px-4 py-2 w-1/2 flex justify-center gap-2 items-center text-black bg-white text-center uppercase lg:text-sm text-xs font-semibold ">
               <Image src={"/shopping-bag.svg"} width={20} height={20} alt="" />{" "}
-              Add to Cart{" "}
+              Add{" "}
             </button>
             <button className="rounded-xl px-4 py-2 w-1/2 text-white bg-transparent border border-spacing-1  md:text-sm text-xs border-white text-center uppercase font-semibold ">
               {" "}
