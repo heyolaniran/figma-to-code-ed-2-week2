@@ -29,8 +29,13 @@ export const rightLinks :  linksType[] = [
     {
         id: 1,
         name: 'Shop', 
-        href: 'About Us'
+        href: '/products'
     }, 
+    {
+        id: 2, 
+        name: 'About Us', 
+        href: ''
+    },
     {
         id: 2,
         name: 'Account', 
@@ -197,4 +202,5 @@ export const FooterLinks:  FooterLinksType[] = [
         ]
     } 
     
-]
+]; 
+

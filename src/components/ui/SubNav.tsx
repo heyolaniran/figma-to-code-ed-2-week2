@@ -1,4 +1,5 @@
 "use client";
+import { leftLinks, rightLinks } from "@/constants";
 import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,7 +8,7 @@ import { useState } from "react";
 export default function SubNav() {
   const [open, setIsOpen] = useState<boolean>(false);
   return (
-    <nav className="bg-white  px-4 py-2 lg:hidden block">
+    <nav className="bg-white sticky    px-4 py-2 lg:hidden block">
       <div className="flex items-center justify-between px-6">
         <div className="">
           <Image
@@ -32,11 +33,43 @@ export default function SubNav() {
 
       <div
         className={clsx(
-          `relative  h-1/2 text-white lg:hidden bg-black/70 top-0 w-full -translate-y-full transition-all ${open ? "" : "hidden"}`,
+          `relative  h-1/2 text-dark z-50 items-center lg:hidden bg-white  w-full -translate-y-full transition-all ${open ? "" : "hidden"}`,
           open && "translate-y-0 ",
         )}
       >
-        lorem
+        <div className="mb-2">
+          {
+            leftLinks.map((link) => (
+              <Link href={link.href} key={link.id} className="flex justify-center items-center mt-2">{link.name}</Link>
+            ))
+          }
+          {
+            rightLinks.map((link) => (
+              <Link href={link.href} key={link.id} className="flex justify-center items-center mt-2">
+                {link.name === "Account" ? (
+                  <span className="gap-1 flex items-center">
+                    {" "}
+                    <Image
+                      src={"/user.svg"}
+                      width={18}
+                      height={18}
+                      alt=""
+                    />{" "}
+                    {link.name}{" "}
+                  </span>
+                ) : (
+                  link.name
+                )}
+              </Link>
+            ))
+          }
+        </div>
+
+        <div className="py-2">
+          <Link href={'/'} className="flex items-center justify-center uppercase">Faq</Link>
+          <Link href={'/'} className="flex items-center justify-center capitalize">Contact Us</Link>
+        </div>
+      
       </div>
     </nav>
   );

@@ -42,8 +42,11 @@ export default function NavBar() {
           </div>
         </div>
       </nav>
-
-      <SubNav />
+      
+      <div className="sticky ">
+        <SubNav />  
+      </div>
+      
     </>
   );
 }
