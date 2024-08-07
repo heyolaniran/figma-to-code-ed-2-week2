@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FooterLinks } from "@/constants";
 import FooterLink from "./ui/FooterLink";
 export default function Footer() {
@@ -46,7 +47,11 @@ export default function Footer() {
             }
         </div>
 
+
       </div>
+      <div className="mt-8  text-slate-300 text-xs text-center items-center flex justify-center">
+           <p> &copy; BALLAMAS {(new Date()).getFullYear()} by <Link href="https://x.com/heyolaniran" className="underline underline-offset-1"> Olaniran </Link> </p>
+        </div>
     </footer>
   );
 }
