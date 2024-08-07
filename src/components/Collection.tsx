@@ -30,7 +30,7 @@ export default function Collection() {
         </div>
         <div className="col-span-2 h-full min-h-96 flex-row items-center px-10 py-12 rounded-2xl bg-collection-b  bg-right-top bg-cover bg-no-repeat ">
           <div className="my-4 relative flex px-4 justify-center py-5 items-center text-white">
-              Classic Men 
+            Classic Men
           </div>
           <div className="flex items-center text-white text-center justify-center">
             We’re changing the way things get made

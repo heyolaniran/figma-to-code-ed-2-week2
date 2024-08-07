@@ -1,4 +1,4 @@
-import { categoryType, linksType, productType } from "@/types";
+import { categoryType, FooterLinksType, linksType, productType } from "@/types";
 
 export const leftLinks : linksType[] = [
     { 
@@ -109,4 +109,92 @@ export const products : productType[] = [
         promo: false, 
         category : 1
     }, 
+]; 
+
+export const FooterLinks:  FooterLinksType[] = [
+    {
+        id: 1, 
+        name: 'Product',
+        links: [
+            {
+                id: 1, 
+                name: 'Jacket',
+                href:  ''
+            }, 
+            {
+                id: 2, 
+                name: 'T-Shirt',
+                href:  ''
+            }, 
+            {
+                id: 3, 
+                name: 'Shoes',
+                href:  ''
+            }, 
+            {
+                id: 4, 
+                name: 'Sunglasses',
+                href:  ''
+            }
+        ]
+    }, 
+    {
+        id: 2, 
+        name: 'Categories',
+        links: [
+            {
+                id: 1, 
+                name: 'Man',
+                href:  ''
+            }, 
+            {
+                id: 2, 
+                name: 'Woman',
+                href:  ''
+            }, 
+            {
+                id: 3, 
+                name: 'Kids',
+                href:  ''
+            }, 
+            {
+                id: 4, 
+                name: 'Gift',
+                href:  ''
+            },
+            {
+                id: 5, 
+                name: 'New Arrival',
+                href:  ''
+            }
+        ]
+    },
+    {
+        id: 3, 
+        name: 'Our Social Media',
+        links: [
+            {
+                id: 1, 
+                name: 'Instagram',
+                href:  ''
+            }, 
+            {
+                id: 2, 
+                name: 'Facebook',
+                href:  ''
+            }, 
+            {
+                id: 3, 
+                name: 'Youtube',
+                href:  ''
+            }, 
+            {
+                id: 4, 
+                name: 'X',
+                href:  ''
+            },
+          
+        ]
+    } 
+    
 ]
