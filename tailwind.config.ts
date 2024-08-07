@@ -10,7 +10,9 @@ const config: Config = {
     extend: {
 
       backgroundImage: {
-       'hero' : "url('/hero.svg')"
+       'hero' : "url('/hero.svg')", 
+       'collection-a': "url('/collection-a.svg')",
+       'collection-b' : "url('/collection-b.svg')"
       },
 
     },
