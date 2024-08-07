@@ -1,4 +1,4 @@
-import { categoryType, FooterLinksType, linksType, productType } from "@/types";
+import { categoryType, FooterLinksType, linksType, productType, sizeProps } from "@/types";
 
 export const leftLinks : linksType[] = [
     { 
@@ -204,3 +204,45 @@ export const FooterLinks:  FooterLinksType[] = [
     
 ]; 
 
+
+export const colors = [
+    {
+        id: 1, 
+        color : 'color-green'
+    }, 
+    {
+        id: 2, 
+        color : 'color-purple'
+    }, 
+    {
+        id: 3, 
+        color : 'color-ocean'
+    }, 
+    {
+        id: 4, 
+        color : 'color-olive'
+    }, 
+]
+
+export const sizes: sizeProps[] = [
+    {
+        id: 1 , 
+        name: 'xs'
+    }, 
+    {
+        id: 2 , 
+        name: 's'
+    }, 
+    {
+        id: 3 , 
+        name: 'm'
+    }, 
+    {
+        id: 4 , 
+        name: 'l'
+    }, 
+    {
+        id: 5 , 
+        name: 'xl'
+    }
+]

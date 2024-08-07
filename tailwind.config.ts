@@ -12,8 +12,13 @@ const config: Config = {
       backgroundImage: {
        'hero' : "url('/hero.svg')", 
        'collection-a': "url('/collection-a.svg')",
-       'collection-b' : "url('/collection-b.svg')"
+       'collection-b' : "url('/collection-b.svg')", 
+       'color-green' : '#2D5C43', 
+       'color-purple' : '#393158', 
+       'color-ocean': '#2A5259', 
+       'color-olive': '#706947'
       },
+
 
     },
     variants: {

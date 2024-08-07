@@ -31,3 +31,13 @@ type fLinks = {
     name: string 
     href : string
 }
+
+export type coloreProps = {
+    id: number
+    color : string
+}
+
+export type sizeProps = {
+    id: number
+    name: string
+}

@@ -38,38 +38,48 @@ export default function SubNav() {
         )}
       >
         <div className="mb-2">
-          {
-            leftLinks.map((link) => (
-              <Link href={link.href} key={link.id} className="flex justify-center items-center mt-2">{link.name}</Link>
-            ))
-          }
-          {
-            rightLinks.map((link) => (
-              <Link href={link.href} key={link.id} className="flex justify-center items-center mt-2">
-                {link.name === "Account" ? (
-                  <span className="gap-1 flex items-center">
-                    {" "}
-                    <Image
-                      src={"/user.svg"}
-                      width={18}
-                      height={18}
-                      alt=""
-                    />{" "}
-                    {link.name}{" "}
-                  </span>
-                ) : (
-                  link.name
-                )}
-              </Link>
-            ))
-          }
+          {leftLinks.map((link) => (
+            <Link
+              href={link.href}
+              key={link.id}
+              className="flex justify-center items-center mt-2"
+            >
+              {link.name}
+            </Link>
+          ))}
+          {rightLinks.map((link) => (
+            <Link
+              href={link.href}
+              key={link.id}
+              className="flex justify-center items-center mt-2"
+            >
+              {link.name === "Account" ? (
+                <span className="gap-1 flex items-center">
+                  {" "}
+                  <Image src={"/user.svg"} width={18} height={18} alt="" />{" "}
+                  {link.name}{" "}
+                </span>
+              ) : (
+                link.name
+              )}
+            </Link>
+          ))}
         </div>
 
         <div className="py-2">
-          <Link href={'/'} className="flex items-center justify-center uppercase">Faq</Link>
-          <Link href={'/'} className="flex items-center justify-center capitalize">Contact Us</Link>
+          <Link
+            href={"/"}
+            className="flex items-center justify-center uppercase"
+          >
+            Faq
+          </Link>
+          <Link
+            href={"/"}
+            className="flex items-center justify-center capitalize"
+          >
+            Contact Us
+          </Link>
         </div>
-      
       </div>
     </nav>
   );

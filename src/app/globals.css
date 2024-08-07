@@ -22,6 +22,22 @@ html {
   font-family: "Archivo", sans-serif;
 }
 
+.color-olive {
+  background-color: #706947;
+}
+
+.color-green {
+  background-color: #2D5C43;
+}
+
+.color-purple {
+  background-color: #393158;
+}
+
+.color-ocean {
+  background-color: #2A5259;
+}
+
 @layer utilities {
 
   .hero {
