@@ -71,25 +71,39 @@ export const products : productType[] = [
         id : 1 ,
         name: "SUMMER SHIRT", 
         price: 99,
-        promo: false, 
+        promo: true, 
         category : 1
     }, 
     {
-        id : 1 ,
+        id : 2 ,
+        name: "SUMMER SHIRT", 
+        price: 99,
+        promo: true, 
+        category : 1
+    }, 
+    {
+        id : 3 ,
         name: "SUMMER SHIRT", 
         price: 99,
         promo: false, 
         category : 1
     }, 
     {
-        id : 1 ,
+        id : 4 ,
         name: "SUMMER SHIRT", 
         price: 99,
         promo: false, 
         category : 1
     }, 
     {
-        id : 1 ,
+        id : 5 ,
+        name: "SUMMER SHIRT", 
+        price: 99,
+        promo: true, 
+        category : 1
+    }, 
+    {
+        id : 6 ,
         name: "SUMMER SHIRT", 
         price: 99,
         promo: false, 

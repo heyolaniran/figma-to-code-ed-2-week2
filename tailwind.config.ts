@@ -8,10 +8,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
+
       backgroundImage: {
-       'hero' : "url('/hero.svg')"
+       'hero' : "url('/hero.svg')", 
+       'collection-a': "url('/collection-a.svg')",
+       'collection-b' : "url('/collection-b.svg')"
       },
+
     },
+    variants: {
+      extend: {
+          display: ["group-hover"],
+      },
+  },
   },
   plugins: [],
 }
