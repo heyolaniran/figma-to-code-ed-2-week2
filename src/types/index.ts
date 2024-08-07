@@ -19,3 +19,15 @@ export type productType = {
     promo: boolean
     category: number
 }
+
+export type FooterLinksType = {
+    id: number
+    name : string
+    links: fLinks[]
+}
+
+type fLinks = {
+    id: number
+    name: string 
+    href : string
+}
