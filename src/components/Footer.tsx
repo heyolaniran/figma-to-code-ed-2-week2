@@ -6,7 +6,6 @@ export default function Footer() {
   return (
     <footer className="bg-black  items-center text-white px-16 py-12">
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-6">
-
         <div className="items-start px-2">
           <div className="mb-4">
             <Image
@@ -39,19 +38,25 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="items-start grid grid-cols-3 gap-2">
-            {
-              FooterLinks.map((footerLink) => (
-                <FooterLink key={footerLink.id} item={footerLink} />
-              ))
-            }
+        <div className="items-start grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1  gap-2">
+          {FooterLinks.map((footerLink) => (
+            <FooterLink key={footerLink.id} item={footerLink} />
+          ))}
         </div>
-
-
       </div>
-      <div className="mt-8  text-slate-300 text-xs text-center items-center flex justify-center">
-           <p> &copy; BALLAMAS {(new Date()).getFullYear()} by <Link href="https://x.com/heyolaniran" className="underline underline-offset-1"> Olaniran </Link> </p>
-        </div>
+      <div className="mt-8  text-slate-300 text-sm text-center items-center flex justify-center">
+        <p>
+          {" "}
+          &copy; BALLAMAS {new Date().getFullYear()} by{" "}
+          <Link
+            href="https://x.com/heyolaniran"
+            className="underline underline-offset-1"
+          >
+            {" "}
+            Olaniran{" "}
+          </Link>{" "}
+        </p>
+      </div>
     </footer>
   );
 }
