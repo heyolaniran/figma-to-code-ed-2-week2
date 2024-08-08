@@ -58,3 +58,12 @@ export type ShoppingMethodProps = {
     description: string, 
     price: number
 }
+
+export type CartProductProps = {
+    name: string
+    color: string
+    size: string
+    picture: string
+    amount: number
+    currency: string
+}
