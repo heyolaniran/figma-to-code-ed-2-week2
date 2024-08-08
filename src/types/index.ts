@@ -93,4 +93,6 @@ type ProductVariantProps = {
     id: string
     title: string
     picture: string
+    price: number
+    currency: string
 }

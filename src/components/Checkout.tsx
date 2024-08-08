@@ -1,11 +1,18 @@
+"use client";
 import Link from "next/link";
-import Image from "next/image";
 import CheckoutArticle from "./ui/CheckoutArticle";
 import ShoppingMethod from "./ui/ShoppingMethod";
 import CheckoutInput from "./ui/CheckoutInput";
 import ShoppingPaymentMethod from "./ui/ShoppingPaymentMethod";
 import { inputs, shoppingMehods } from "@/constants";
+import { useEffect } from "react";
+import { fetcher } from "@/utils/api";
 export default function Checkout() {
+  useEffect(() => {
+    console.log("Test on load");
+    fetcher("");
+  }, []);
+
   return (
     <div className="container mb-4">
       <h1 className="text-bold font-bold text-xl mb-2">Checkout</h1>
