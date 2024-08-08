@@ -108,13 +108,10 @@ export default function Checkout() {
               />
             </div>
             <div className="grid lg:grid-cols-2 gap-2 mb-4 mt-4 grid-cols-1">
-               {
-                inputs.map((input, index) => (
-                  <CheckoutInput item={input} key={index} />
-                ))
-               }
+              {inputs.map((input, index) => (
+                <CheckoutInput item={input} key={index} />
+              ))}
             </div>
-            
 
             {/** Selected Payment Method */}
             <div className="">
