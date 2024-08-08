@@ -91,61 +91,155 @@ export default function Checkout() {
             <h2 className="mt-4 font-bold">Shipping Address</h2>
 
             <div className="grid  xl:grid-cols-2 md:grid-cols-2 gap-2 mb-4 mt-4 grid-cols-1">
-                <CheckoutInput item={{label: 'first Name' , placeholder: 'First Name', type: 'text'}} />
-                <CheckoutInput item={{label: 'first Name' , placeholder: 'First Name', type: 'text'}} />
+              <CheckoutInput
+                item={{
+                  label: "first Name",
+                  placeholder: "First Name",
+                  type: "text",
+                }}
+              />
+              <CheckoutInput
+                item={{
+                  label: "first Name",
+                  placeholder: "First Name",
+                  type: "text",
+                }}
+              />
             </div>
             <div className="grid lg:grid-cols-2 gap-2 mb-4 mt-4 grid-cols-1">
-                <CheckoutInput item={{label: 'first Name' , placeholder: 'First Name', type: 'text'}} />
-                <CheckoutInput item={{label: 'first Name' , placeholder: 'First Name', type: 'text'}} />
+              <CheckoutInput
+                item={{
+                  label: "first Name",
+                  placeholder: "First Name",
+                  type: "text",
+                }}
+              />
+              <CheckoutInput
+                item={{
+                  label: "first Name",
+                  placeholder: "First Name",
+                  type: "text",
+                }}
+              />
             </div>
             <div className="grid lg:grid-cols-2 gap-2 mb-4 mt-4 grid-cols-1">
-                <CheckoutInput item={{label: 'first Name' , placeholder: 'First Name', type: 'text'}} />
-                <CheckoutInput item={{label: 'first Name' , placeholder: 'First Name', type: 'text'}} />
+              <CheckoutInput
+                item={{
+                  label: "first Name",
+                  placeholder: "First Name",
+                  type: "text",
+                }}
+              />
+              <CheckoutInput
+                item={{
+                  label: "first Name",
+                  placeholder: "First Name",
+                  type: "text",
+                }}
+              />
             </div>
             <div className="grid lg:grid-cols-2 gap-2 mb-4 mt-4 grid-cols-1">
-                <CheckoutInput item={{label: 'first Name' , placeholder: 'First Name', type: 'text'}} />
-                <CheckoutInput item={{label: 'first Name' , placeholder: 'First Name', type: 'text'}} />
+              <CheckoutInput
+                item={{
+                  label: "first Name",
+                  placeholder: "First Name",
+                  type: "text",
+                }}
+              />
+              <CheckoutInput
+                item={{
+                  label: "first Name",
+                  placeholder: "First Name",
+                  type: "text",
+                }}
+              />
             </div>
-            
+
             {/** Selected Payment Method */}
             <div className="">
-                <h1 className="text-md px-2 py-2 font-bold capitalize"> Selected payment Method </h1>
+              <h1 className="text-md px-2 py-2 font-bold capitalize">
+                {" "}
+                Selected payment Method{" "}
+              </h1>
 
-                <div className="grid grid-cols-2 gap-2">
-                    <ShoppingPaymentMethod item={{icon: '/credit-card.svg', name : 'Debit / Credit Card'}} />
-                    <ShoppingPaymentMethod item={{icon: '/bank.svg', name : 'Virtual Account'}}/>
-                </div>
+              <div className="grid grid-cols-2 gap-2">
+                <ShoppingPaymentMethod
+                  item={{
+                    icon: "/credit-card.svg",
+                    name: "Debit / Credit Card",
+                  }}
+                />
+                <ShoppingPaymentMethod
+                  item={{ icon: "/bank.svg", name: "Virtual Account" }}
+                />
+              </div>
             </div>
 
             <div className="relative mt-4">
-                <input type="search" id="default-search" className="block w-full p-4 ps-10 text-sm text-gray-900 border  rounded-full " placeholder="Search Mockups, Logos..." required />
-                <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                    <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                    </svg>
-                </div>
+              <input
+                type="search"
+                id="default-search"
+                className="block w-full p-4 ps-10 text-sm text-gray-900 border  rounded-full "
+                placeholder="Search Mockups, Logos..."
+                required
+              />
+              <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                <svg
+                  className="w-4 h-4 text-gray-500 dark:text-gray-400"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+              </div>
             </div>
-            
+
             <div className="grid xl:grid-cols-2 md:grid-cols-2 gap-2 mb-4 mt-4 grid-cols-1">
-                <CheckoutInput item={{label: '' , placeholder: 'Expiration Date', type: 'date'}} />
-                <CheckoutInput item={{label: '' , placeholder: 'Code', type: 'number'}} />
+              <CheckoutInput
+                item={{
+                  label: "",
+                  placeholder: "Expiration Date",
+                  type: "date",
+                }}
+              />
+              <CheckoutInput
+                item={{ label: "", placeholder: "Code", type: "number" }}
+              />
             </div>
 
             <div className="mt-2">
-            <div className="inline-flex items-center">
-                <label className="relative flex items-center p-3 rounded-full cursor-pointer" htmlFor="checkbox">
-                    <input type="checkbox"
+              <div className="inline-flex items-center">
+                <label
+                  className="relative flex items-center p-3 rounded-full cursor-pointer"
+                  htmlFor="checkbox"
+                >
+                  <input
+                    type="checkbox"
                     className="before:content[''] mx-2 peer  relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-blue-gray-200 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:bg-gray-900 checked:before:bg-gray-900 hover:before:opacity-10"
-                    id="checkbox"  />
-                    <span className="text-xs font-normal items-center">Use Shipping address as Billing Address</span>
+                    id="checkbox"
+                  />
+                  <span className="text-xs font-normal items-center">
+                    Use Shipping address as Billing Address
+                  </span>
                 </label>
+              </div>
 
-            </div>
-
-            <div className="mt-2 flex justify-center">
-                <Link href={'/sold'} className="px-6 py-2 rounded-full flex justify-center items-center  xl:w-1/2 bg-black text-white">Pay $547.00 &rarr; </Link>
-            </div>
-
+              <div className="mt-2 flex justify-center">
+                <Link
+                  href={"/sold"}
+                  className="px-6 py-2 rounded-full flex justify-center items-center  xl:w-1/2 bg-black text-white"
+                >
+                  Pay $547.00 &rarr;{" "}
+                </Link>
+              </div>
             </div>
           </div>
         </div>
