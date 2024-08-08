@@ -41,3 +41,14 @@ export type sizeProps = {
     id: number
     name: string
 }
+
+export type InputProps = {
+    label : string
+    placeholder: string
+    type: string
+}
+
+export type ShoppingPaymentMethodProps = {
+    icon: string
+    name: string
+}
