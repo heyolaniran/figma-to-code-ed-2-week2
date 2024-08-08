@@ -4,6 +4,7 @@ import CheckoutArticle from "./ui/CheckoutArticle";
 import ShoppingMethod from "./ui/ShoppingMethod";
 import CheckoutInput from "./ui/CheckoutInput";
 import ShoppingPaymentMethod from "./ui/ShoppingPaymentMethod";
+import { inputs } from "@/constants";
 export default function Checkout() {
   return (
     <div className="container mb-4">
@@ -107,53 +108,13 @@ export default function Checkout() {
               />
             </div>
             <div className="grid lg:grid-cols-2 gap-2 mb-4 mt-4 grid-cols-1">
-              <CheckoutInput
-                item={{
-                  label: "first Name",
-                  placeholder: "First Name",
-                  type: "text",
-                }}
-              />
-              <CheckoutInput
-                item={{
-                  label: "first Name",
-                  placeholder: "First Name",
-                  type: "text",
-                }}
-              />
+               {
+                inputs.map((input, index) => (
+                  <CheckoutInput item={input} key={index} />
+                ))
+               }
             </div>
-            <div className="grid lg:grid-cols-2 gap-2 mb-4 mt-4 grid-cols-1">
-              <CheckoutInput
-                item={{
-                  label: "first Name",
-                  placeholder: "First Name",
-                  type: "text",
-                }}
-              />
-              <CheckoutInput
-                item={{
-                  label: "first Name",
-                  placeholder: "First Name",
-                  type: "text",
-                }}
-              />
-            </div>
-            <div className="grid lg:grid-cols-2 gap-2 mb-4 mt-4 grid-cols-1">
-              <CheckoutInput
-                item={{
-                  label: "first Name",
-                  placeholder: "First Name",
-                  type: "text",
-                }}
-              />
-              <CheckoutInput
-                item={{
-                  label: "first Name",
-                  placeholder: "First Name",
-                  type: "text",
-                }}
-              />
-            </div>
+            
 
             {/** Selected Payment Method */}
             <div className="">

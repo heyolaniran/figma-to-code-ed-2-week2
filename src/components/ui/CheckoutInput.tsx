@@ -5,7 +5,7 @@ export default function CheckoutInput({ item }: { item: InputProps }) {
     <div>
       <label
         htmlFor={""}
-        className="block px-2 capitalize mb-2 text-xs font-medium text-gray-900 dark:text-white"
+        className="block px-2 capitalize mb-2 text-sm font-medium text-gray-900 dark:text-white"
       >
         {item.label}
       </label>
