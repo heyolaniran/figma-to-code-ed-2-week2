@@ -12,7 +12,7 @@ export default function CheckoutInput({ item }: { item: InputProps }) {
       <input
         type={item.type}
         id={""}
-        className="border border-black text-gray-900 text-xs rounded-full block w-full p-2.5"
+        className="border border-black text-gray-900 text-sm rounded-full block w-full p-2.5"
         placeholder={item.placeholder}
         required
       />

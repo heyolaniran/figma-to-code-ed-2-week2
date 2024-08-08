@@ -4,7 +4,7 @@ import CheckoutArticle from "./ui/CheckoutArticle";
 import ShoppingMethod from "./ui/ShoppingMethod";
 import CheckoutInput from "./ui/CheckoutInput";
 import ShoppingPaymentMethod from "./ui/ShoppingPaymentMethod";
-import { inputs } from "@/constants";
+import { inputs, shoppingMehods } from "@/constants";
 export default function Checkout() {
   return (
     <div className="container mb-4">
@@ -77,8 +77,9 @@ export default function Checkout() {
             </div>
           </div>
           {/** Shopping Method */}
-
-          <ShoppingMethod />
+          {shoppingMehods.map((method, index) => (
+            <ShoppingMethod method={method} key={index} index={index} />
+          ))}
         </div>
 
         {/** Payment Details  */}

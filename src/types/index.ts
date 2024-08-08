@@ -52,3 +52,9 @@ export type ShoppingPaymentMethodProps = {
     icon: string
     name: string
 }
+
+export type ShoppingMethodProps = {
+    name : string
+    description: string, 
+    price: number
+}

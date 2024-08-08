@@ -1,4 +1,4 @@
-import { categoryType, FooterLinksType, InputProps, linksType, productType, sizeProps } from "@/types";
+import { categoryType, FooterLinksType, InputProps, linksType, productType, ShoppingMethodProps, sizeProps } from "@/types";
 
 export const leftLinks : linksType[] = [
     { 
@@ -287,5 +287,24 @@ export const inputs: InputProps[] = [
         label: "Postal Code",
         placeholder: " Enter your Postal",
         type: "text",
+    },
+]; 
+
+
+export const shoppingMehods : ShoppingMethodProps[] = [
+    {
+        name: 'Free', 
+        description: '7-30 business days', 
+        price: 0
+    },
+    {
+        name: 'Regular shipping', 
+        description: '3-14 business days', 
+        price: 7.5
+    },
+    {
+        name: 'Express Shipping', 
+        description: '1-3 business days', 
+        price: 22.50
     },
 ]
