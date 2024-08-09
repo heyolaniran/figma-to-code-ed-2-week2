@@ -1,11 +1,24 @@
 "use client";
 import Link from "next/link";
 import { categories, products } from "@/constants";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Product from "./ui/Product";
+import { ProductCollectionProps } from "@/types";
+import { getCollectionProducts } from "@/utils/api";
 
 export default function Category() {
+
+
   const [active, setActive] = useState<number>(1);
+
+  const [products, setProducts] = useState<ProductCollectionProps[]>([]);
+
+  useEffect(() => {
+    getCollectionProducts(6).then((data) => {
+      setProducts(data); 
+    } )
+  }, [])
+
   return (
     <section className=" container w-full mt-14 pb-12">
       <div className="lg:px-24 mt-2">
@@ -35,8 +48,8 @@ export default function Category() {
             <div className="mt-2 px-6 pb-2">
               <h1 className="text-md font-bold leading-4"> {product.name} </h1>
 
-              <h2 className="text-gray-400 mt-2 font-semibold leading-4 text-2xl items-center">
-                <span className="text-sm">$</span>
+              <h2 className="text-gray-400 mt-2 gap-1 flex font-semibold leading-4 text-2xl items-center">
+                <span className="text-sm">{product.currency}</span>
                 {product.price}
               </h2>
             </div>

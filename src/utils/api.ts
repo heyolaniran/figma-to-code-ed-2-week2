@@ -133,7 +133,7 @@ export const getCartProducts = async () => {
 
 }
 
-export const getCollectionProduct = async (items : number) => {
+export const getCollectionProducts = async (items : number) => {
 
     const url = `https://mock.shop/api?query=%7B%20products(first%3A%20${items})%20%7B%20edges%20%7B%20node%20%7B%20id%20title%20description%20featuredImage%20%7B%20id%20url%20%7D%20variants(first%3A%203)%20%7B%20edges%20%7B%20node%20%7B%20price%20%7B%20amount%20currencyCode%20%7D%20%7D%20%7D%20%7D%20%7D%20%7D%20%7D%7D`; 
 
