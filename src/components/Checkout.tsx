@@ -5,13 +5,28 @@ import ShoppingMethod from "./ui/ShoppingMethod";
 import CheckoutInput from "./ui/CheckoutInput";
 import ShoppingPaymentMethod from "./ui/ShoppingPaymentMethod";
 import { inputs, shoppingMehods } from "@/constants";
-import { useEffect } from "react";
-import { fetcher } from "@/utils/api";
+import { useEffect, useState } from "react";
+import { fetcher, getCollectionProduct } from "@/utils/api";
+import { CheckoutProductProps } from "@/types";
 export default function Checkout() {
+
+  const [products,  setProducts] = useState<CheckoutProductProps[]>([]); 
+
+  
   useEffect(() => {
-    console.log("Test on load");
-    fetcher("");
+    getCollectionProduct(3).then((data) => {
+      setProducts(data); 
+    })
+
+    
   }, []);
+
+  let sum = 0 ; 
+  products.map((product) => {
+    
+    sum = sum + (Number(product.price))
+    
+  })
 
   return (
     <div className="container mb-4">
@@ -31,9 +46,10 @@ export default function Checkout() {
             </Link>
             .
           </p>
-
-          <CheckoutArticle />
-          <CheckoutArticle />
+          {products.map((product, index) => (
+               <CheckoutArticle item={product} key={index}  />
+          ))}
+         
 
           <div className="mt-2">
             <h2 className="text-md font-bold">Discount Code</h2>
@@ -64,7 +80,7 @@ export default function Checkout() {
             <div className="flex justify-between mt-4 text-gray-400">
               <p className=" text-gray-400 text-sm">Subtotal</p>
               <p className="flex items-center text-sm">
-                <span className="text-xs">$</span>524
+                <span className="text-xs">$</span> {sum}
               </p>
             </div>
             <div className="flex justify-between mt-2 text-gray-400">
@@ -79,7 +95,7 @@ export default function Checkout() {
             <div className="flex justify-between mt-2">
               <p className=" text-sm font-bold">Order Total</p>
               <p className="flex items-center font-bold text-sm">
-                <span className="text-xs">$</span>524
+                <span className="text-xs">$</span>{sum}
               </p>
             </div>
           </div>
@@ -203,7 +219,7 @@ export default function Checkout() {
                   href={"/sold"}
                   className="px-6 py-2 rounded-full flex justify-center items-center  xl:w-1/2 bg-black text-white"
                 >
-                  Pay $547.00 &rarr;{" "}
+                  Pay ${sum} &rarr;{" "}
                 </Link>
               </div>
             </div>
