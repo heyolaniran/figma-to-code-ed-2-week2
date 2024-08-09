@@ -96,3 +96,5 @@ type ProductVariantProps = {
     price: number
     currency: string
 }
+
+export type CartAmountProps = {amount: string , currencyCode : string}

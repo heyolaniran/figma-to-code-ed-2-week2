@@ -1,5 +1,5 @@
 import { products } from "@/constants";
-import { ProductCollectionProps, ProductDetailProps } from "@/types";
+import { CartProductProps, ProductCollectionProps, ProductDetailProps } from "@/types";
 
 
 export const fetcher = async  (url : string) => {
@@ -37,6 +37,101 @@ export const getProductWithVariants = async () => {
 
 }
 
+
+export const getCartProducts = async () => {
+
+    const body = {
+        query: `mutation CartCreate {
+          cartCreate(
+            input: {
+              lines: [
+                {
+                  quantity: 3
+                  merchandiseId: "gid://shopify/ProductVariant/43695848128534"
+                }
+                
+                
+
+              ]
+            }
+          ) {
+            cart {
+              id
+              createdAt
+              updatedAt
+              lines(first: 10) {
+                edges {
+                  node {
+                    id
+                    merchandise {
+                      ... on ProductVariant {
+                        id
+                        title
+                        image {
+                          id
+                          url
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              cost {
+                totalAmount {
+                  amount
+                  currencyCode
+                }
+                subtotalAmount {
+                  amount
+                  currencyCode
+                }
+              }
+            }
+          }
+        }`
+      };
+      const request = await fetch('https://mock.shop/api', {
+        method: "POST",
+        body: JSON.stringify(body),
+        headers: {
+          "content-type": "application/json"
+        },
+      });
+      
+      const response = await request.json();
+
+      const cart = response.data.cartCreate.cart; 
+
+
+      const products = cart.lines.edges; 
+     
+      const cartProducts : CartProductProps[] = [] ; 
+
+      products.map((item : any) => {
+        
+        cartProducts.push({
+            id: item.node.id, 
+            name: item.node.title, 
+            color: '', 
+            size: '',
+            picture: item.node.merchandise.image.url, 
+            amount: 0,
+            currency: ""
+            
+        })
+
+      })
+      
+
+      const subtotalAmount = cart.cost.subtotalAmount
+
+      const totalAmount =  cart.cost.totalAmount
+     
+      
+      return {cartProducts ,  subtotalAmount , totalAmount}
+
+
+}
 
 export const getCollectionProduct = async (items : number) => {
 
