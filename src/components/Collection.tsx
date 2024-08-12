@@ -29,13 +29,13 @@ export default function Collection() {
           </div>
         </div>
         <div className="col-span-2 h-full min-h-96 flex-row items-center px-10 py-12 rounded-2xl bg-collection-b  bg-right-top bg-cover bg-no-repeat ">
-               <h1
-                  className={
-                    " flex justify-center mb-2 items-center font-[Chillax-Bold] text-3xl lg:text-6xl leading-[60px] text-transparent text-stroke-white text-stroke "
-                  }
-                >
-                  CLASSIC MEN
-                </h1>
+          <h1
+            className={
+              " flex justify-center mb-2 items-center font-[Chillax-Bold] text-3xl lg:text-6xl leading-[60px] text-transparent text-stroke-white text-stroke "
+            }
+          >
+            CLASSIC MEN
+          </h1>
           <div className="flex items-center text-white text-center justify-center">
             We’re changing the way things get made
           </div>
