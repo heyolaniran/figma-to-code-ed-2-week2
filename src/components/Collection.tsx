@@ -4,7 +4,7 @@ export default function Collection() {
   return (
     <section className=" mb-8">
       <div className=" items-center mt-12">
-        <h1 className="lg:text-4xl text-xl text-center mb-2 leading-4 flex justify-center items-center font-bold uppercase">
+        <h1 className="lg:text-4xl font-[Chillax-Bold] text-xl text-center mb-2 leading-4 flex justify-center items-center font-bold uppercase">
           Our Collection{" "}
         </h1>
 
@@ -29,9 +29,13 @@ export default function Collection() {
           </div>
         </div>
         <div className="col-span-2 h-full min-h-96 flex-row items-center px-10 py-12 rounded-2xl bg-collection-b  bg-right-top bg-cover bg-no-repeat ">
-          <div className="my-4 relative flex px-4 justify-center py-5 items-center text-white">
-            Classic Men
-          </div>
+          <h1
+            className={
+              " flex justify-center mb-2 items-center font-[Chillax-Bold] text-3xl lg:text-6xl leading-[60px] text-transparent text-stroke-white text-stroke "
+            }
+          >
+            CLASSIC MEN
+          </h1>
           <div className="flex items-center text-white text-center justify-center">
             We’re changing the way things get made
           </div>

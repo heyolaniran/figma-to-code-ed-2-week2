@@ -1,10 +1,20 @@
 "use client";
-import { colors, products, sizes } from "@/constants";
+import { colors, sizes } from "@/constants";
 import { useState } from "react";
 import Product from "./ui/Product";
-
+import { useEffect } from "react";
+import { ProductCollectionProps } from "@/types";
+import { getCollectionProducts } from "@/utils/api";
 export default function ProductDetails() {
   const [active, setActive] = useState<number>(1);
+
+  const [products, setProducts] = useState<ProductCollectionProps[]>([]);
+
+  useEffect(() => {
+    getCollectionProducts(4).then((data) => {
+      setProducts(data);
+    });
+  }, []);
 
   return (
     <div className="px-2 py-12">
@@ -16,7 +26,7 @@ export default function ProductDetails() {
         </div>
 
         <div className="container px-6 items-start mt-4 ">
-          <h1 className="lg:text-4xl text-xl font-bold stroke-1 mb-2">
+          <h1 className="lg:text-4xl text-xl font-[Chillax-Bold] font-bold stroke-1 mb-2">
             Badacore T-shirt
           </h1>
 
@@ -54,7 +64,9 @@ export default function ProductDetails() {
           </div>
 
           <div className="mt-2 items-start">
-            <h1 className="text-md font-semibold mb-2">Description </h1>
+            <h1 className="text-md font-semibold font-[Chillax-Bold] mb-2">
+              Description{" "}
+            </h1>
 
             <p className=" text-sm mt-2 text-slate-400 text-justify">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
@@ -68,7 +80,9 @@ export default function ProductDetails() {
       </div>
 
       <div className="mt-4">
-        <h1 className="text-lg font-bold mb-4 px-4">You may also like </h1>
+        <h1 className="text-lg font-bold mb-4 px-4 font-[Chillax-Bold]">
+          You may also like{" "}
+        </h1>
 
         <div className="mt-4 px-6 hide-scrollbar grid lg:grid-cols-4 sm:grid-cols-1 md:grid-cols-2 gap-4">
           {products.map((product) => (
