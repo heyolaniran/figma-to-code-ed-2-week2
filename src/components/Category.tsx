@@ -20,7 +20,7 @@ export default function Category() {
   return (
     <section className=" container w-full mt-14 pb-12">
       <div className="lg:px-24 mt-2">
-        <h1 className="text-2xl leading-8 font-bold font-chillax text-black text-center flex justify-center">
+        <h1 className="text-2xl font-[Chillax-Bold] leading-8 font-bold font-chillax text-black text-center flex justify-center">
           Discover the latest trends in summer fashion. Shop now and refresh
           your wardrobe with our stylish summer shirts.{" "}
         </h1>

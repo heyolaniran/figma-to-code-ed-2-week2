@@ -4,22 +4,22 @@ export const leftLinks : linksType[] = [
     { 
         id: 1,
         name : 'Men',
-        href: ''
+        href: '/'
     }, 
     {
         id: 2,
         name: 'Women', 
-        href: ''
+        href: '/'
     }, 
     {
         id: 3,
         name: 'Kids', 
-        href: ''
+        href: '/'
     }, 
     {
         id: 4,
         name: 'Collections', 
-        href: ''
+        href: '/'
     }
 ] ; 
 

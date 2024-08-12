@@ -24,7 +24,7 @@ export default function Checkout() {
 
   return (
     <div className="container mb-4">
-      <h1 className="text-bold font-bold text-xl mb-2">Checkout</h1>
+      <h1 className="text-bold font-bold text-xl font-[Chillax-Bold] mb-2">Checkout</h1>
 
       <div className="grid xl:grid-cols-2 grid-cols-1  gap-12">
         <div className="">

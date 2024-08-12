@@ -1,31 +1,53 @@
 import { ProductCollectionProps } from "@/types";
 
 import Image from "next/image";
+import Link from "next/link";
 export default function Product({ item }: { item: ProductCollectionProps }) {
   console.log(item);
   return (
     <div
-      className={`bg-[url('/product.svg')] lg:bg-right-top bg-center  bg-cover bg-no-repeat rounded-2xl min-h-96 h-full`}
+      className={`relative group size-auto overflow-hidden rounded-xl`}
     >
-      <div className="flex h-full flex-col items-start justify-between p-6 lg:px-8 lg:py-5 group">
-        <div className=" justify-center items-center gap-4 ">
+
+        <Image
+          src={item.picture}
+          alt={"product"}
+          width={1728}
+          height={2160}
+          quality={100}
+          className={
+            "size-full object-cover hover:brightness-75 transition-all"
+          }
+        />
+
+        <div className="absolute py-4 px-2 top-2 left-1">
           <div className="rounded-xl px-4 py-1 text-black bg-white text-center uppercase text-sm font-semibold">
             {" "}
             Get off 20%{" "}
           </div>
         </div>
+        
 
-        <div className=" hidden group-hover:flex  w-full  gap-2 items-center ">
-          <button className="rounded-xl px-4 py-2 w-1/2 flex justify-center gap-2 items-center text-black bg-white text-center uppercase lg:text-sm text-xs font-semibold ">
+        <div
+          className={
+            "absolute left-0 w-full grid grid-cols-2 gap-1 opacity-0 bottom-0 group-hover:opacity-100 transition-all p-5 text-xs lg:text-base"
+          }
+        >
+          <Link href={'/cart'} className="rounded-xl w-full px-4 py-2  flex justify-center gap-2 items-center text-black bg-white text-center uppercase lg:text-sm text-xs font-semibold ">
             <Image src={"/shopping-bag.svg"} width={20} height={20} alt="" />{" "}
             Add{" "}
-          </button>
-          <button className="rounded-xl px-4 py-2 w-1/2 text-white bg-transparent border border-spacing-1  md:text-sm text-xs border-white text-center uppercase font-semibold ">
+          </Link>
+          <Link href={'/cart'} className="rounded-xl w-full px-4 py-2  text-white bg-transparent border border-spacing-1  md:text-sm text-xs border-white text-center uppercase font-semibold ">
             {" "}
             Buy now{" "}
-          </button>
+          </Link>
+           
         </div>
-      </div>
+      
+       
+         
+       
+     
     </div>
   );
 }

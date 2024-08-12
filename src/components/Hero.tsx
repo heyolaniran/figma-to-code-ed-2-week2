@@ -11,12 +11,12 @@ export default function Hero() {
           <div className=" lg:block hidden flex-grow border-t mx-4 border-white"></div>
         </div>
 
-        <div className="mt-2  items-center font-chillax">
-          <h1 className="text-3xl text-center flex justify-center leading-9 font-bold uppercase">
+        <div className="mt-2  items-center ">
+          <h1 className="text-3xl text-center font-[Chillax-Bold] flex justify-center leading-9 font-bold uppercase">
             DISCOVER THE LATEST FASHION TRENDS HERE{" "}
           </h1>
 
-          <span className="mt-8 text-sm text-center flex justify-center items-center align-middle">
+          <span className="mt-8  text-sm text-center flex justify-center items-center align-middle">
             Discover a world of fashion with our meticulously curated outfits.
             Shop now to update your wardrobe with chic and stylish outfits.
           </span>

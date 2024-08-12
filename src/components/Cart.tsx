@@ -21,7 +21,7 @@ export default function Cart() {
   return (
     <div className="lg:px-8 mt-4 container">
       <div className="mt-4 mb-5 flex justify-between ">
-        <h1 className="text-2xl font-bold stroke-2 capitalize items-start">
+        <h1 className="text-2xl font-[Chillax-Bold] font-bold stroke-2 capitalize items-start">
           {" "}
           Cart({products?.length})
         </h1>
