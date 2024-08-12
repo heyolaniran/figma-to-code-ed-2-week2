@@ -1,18 +1,20 @@
 import { ProductCollectionProps } from "@/types";
+
 import Image from "next/image";
 export default function Product({ item }: { item: ProductCollectionProps }) {
+
+  console.log(item)
   return (
     <div
-      className={`bg-[url('/product.svg')] lg:bg-right-top bg-center  bg-cover bg-no-repeat rounded-2xl min-h-96 h-full`}
+      className={`bg-[url('/product.svg')] lg:bg-right-top bg-center  bg-cover bg-no-repeat rounded-2xl min-h-96 h-full`} 
+      
     >
       <div className="flex h-full flex-col items-start justify-between p-6 lg:px-8 lg:py-5 group">
         <div className=" justify-center items-center gap-4 ">
-        
-            <div className="rounded-xl px-4 py-1 text-black bg-white text-center uppercase text-sm font-semibold">
-              {" "}
-              Get off 20%{" "}
-            </div>
-        
+          <div className="rounded-xl px-4 py-1 text-black bg-white text-center uppercase text-sm font-semibold">
+            {" "}
+            Get off 20%{" "}
+          </div>
         </div>
 
         <div className=" hidden group-hover:flex  w-full  gap-2 items-center ">

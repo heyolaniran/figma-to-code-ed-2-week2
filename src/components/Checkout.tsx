@@ -6,27 +6,21 @@ import CheckoutInput from "./ui/CheckoutInput";
 import ShoppingPaymentMethod from "./ui/ShoppingPaymentMethod";
 import { inputs, shoppingMehods } from "@/constants";
 import { useEffect, useState } from "react";
-import { fetcher, getCollectionProduct } from "@/utils/api";
+import { fetcher, getCollectionProducts } from "@/utils/api";
 import { CheckoutProductProps } from "@/types";
 export default function Checkout() {
+  const [products, setProducts] = useState<CheckoutProductProps[]>([]);
 
-  const [products,  setProducts] = useState<CheckoutProductProps[]>([]); 
-
-  
   useEffect(() => {
-    getCollectionProduct(3).then((data) => {
-      setProducts(data); 
-    })
-
-    
+    getCollectionProducts(3).then((data) => {
+      setProducts(data);
+    });
   }, []);
 
-  let sum = 0 ; 
+  let sum = 0;
   products.map((product) => {
-    
-    sum = sum + (Number(product.price))
-    
-  })
+    sum = sum + Number(product.price);
+  });
 
   return (
     <div className="container mb-4">
@@ -47,9 +41,8 @@ export default function Checkout() {
             .
           </p>
           {products.map((product, index) => (
-               <CheckoutArticle item={product} key={index}  />
+            <CheckoutArticle item={product} key={index} />
           ))}
-         
 
           <div className="mt-2">
             <h2 className="text-md font-bold">Discount Code</h2>
@@ -95,7 +88,8 @@ export default function Checkout() {
             <div className="flex justify-between mt-2">
               <p className=" text-sm font-bold">Order Total</p>
               <p className="flex items-center font-bold text-sm">
-                <span className="text-xs">$</span>{sum}
+                <span className="text-xs">$</span>
+                {sum}
               </p>
             </div>
           </div>

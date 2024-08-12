@@ -7,17 +7,15 @@ import { ProductCollectionProps } from "@/types";
 import { getCollectionProducts } from "@/utils/api";
 
 export default function Category() {
-
-
   const [active, setActive] = useState<number>(1);
 
   const [products, setProducts] = useState<ProductCollectionProps[]>([]);
 
   useEffect(() => {
     getCollectionProducts(6).then((data) => {
-      setProducts(data); 
-    } )
-  }, [])
+      setProducts(data);
+    });
+  }, []);
 
   return (
     <section className=" container w-full mt-14 pb-12">
